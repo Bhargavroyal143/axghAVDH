@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="UTF-8"/><title>CueDeck</title>
+<link rel="stylesheet" href="/src/style.css"/></head>
+<body>
+<div id="app">
+  <header data-tauri-drag-region>
+    <span id="rec" class="off">● Not recording</span>
+    <select id="lang"><option value="en">English</option><option value="hi">Hindi</option><option value="te">Telugu</option></select>
+    <button id="settings">⚙</button>
+  </header>
+  <div id="consent">⚠ Start chese mundu meeting lo andariki recording/transcription gurinchi cheppandi.</div>
+  <main id="transcript"></main>
+  <section id="answer"></section>
+  <footer>
+    <button id="start">Start</button>
+    <button id="assist" disabled>Assist (⌘/Ctrl+Enter)</button>
+    <select id="mode">
+      <option value="say">What should I say?</option>
+      <option value="recap">Recap</option>
+      <option value="followup">Follow-up questions</option>
+    </select>
+    <label title="Hotkey/Assist kottinappudu mee screen Claude ki pampabadutundi"><input type="checkbox" id="shot"/> 📷 Screen</label>
+    <button id="end" disabled>End + Notes</button>
+  </footer>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body></html>
